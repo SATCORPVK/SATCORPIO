@@ -3,74 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fallout 76 - Wasteland Adventures</title>
+    <title>ARK: Survival Ascended - Prehistoric Adventure</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Radiation Warning -->
-    <div class="radiation-warning">
-        <span class="blink">RADIATION WARNING</span>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="dino-loader">
+            <div class="dino-body"></div>
+            <div class="dino-legs"></div>
+            <div class="dino-tail"></div>
+        </div>
+        <p>Loading ARK World...</p>
     </div>
 
-    <!-- Header -->
-    <header class="fallout-header">
-        <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
             <div class="logo">
-                <h1>FALLOUT<span>76</span></h1>
-                <p>WASTELAND ADVENTURES</p>
+                <h2>ARK<span>:</span> SURVIVAL ASCENDED</h2>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#lore">LORE</a></li>
-                    <li><a href="#survival">SURVIVAL</a></li>
-                    <li><a href="#community">COMMUNITY</a></li>
-                    <li><a href="#vault">VAULT-TEC</a></li>
-                </ul>
-            </nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#dinosaurs" class="nav-link">Dinosaurs</a></li>
+                <li class="nav-item"><a href="#survival" class="nav-link">Survival</a></li>
+                <li class="nav-item"><a href="#community" class="nav-link">Community</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="hero-overlay">
             <div class="hero-content">
-                <h2>WELCOME TO APPALACHIA</h2>
-                <p>Twenty-five years after the bombs fell, the vaults have opened. Explore the wasteland alone or with friends in Bethesda's open-world RPG.</p>
-                <div class="cta-buttons">
-                    <button class="btn-primary">PLAY NOW</button>
-                    <button class="btn-secondary">WATCH TRAILER</button>
+                <h1>PREHISTORIC SURVIVAL REIMAGINED</h1>
+                <p>Experience the ultimate dinosaur taming and survival adventure on a hostile island where only the strongest survive.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">PLAY NOW</a>
+                    <a href="#" class="btn btn-secondary">WATCH TRAILER</a>
                 </div>
             </div>
         </div>
-        <div class="scanline"></div>
+        <div class="hero-dino">
+            <div class="dino-silhouette"></div>
+        </div>
     </section>
 
     <!-- Features Section -->
-    <section id="lore" class="features">
+    <section id="features" class="features">
         <div class="container">
-            <h2>WASTELAND FEATURES</h2>
+            <div class="section-header">
+                <h2>EVOLVED SURVIVAL EXPERIENCE</h2>
+                <p>Discover what makes ARK: Survival Ascended the definitive prehistoric survival game</p>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="card-icon">☢️</div>
-                    <h3>RADIATION SYSTEM</h3>
-                    <p>Monitor your radiation levels and manage exposure with Geiger counters and Rad-X.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>TAME DINOSAURS</h3>
+                    <p>Domesticate over 150 creatures and build your own dinosaur army.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="card-icon">⚔️</div>
-                    <h3>PVP ENCOUNTERS</h3>
-                    <p>Engage in player vs player combat in designated zones across Appalachia.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>BUILD BASES</h3>
+                    <p>Construct elaborate structures and fortresses to protect yourself.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="card-icon">🏠</div>
-                    <h3>C.A.M.P. SYSTEM</h3>
-                    <p>Build and customize your personal base anywhere in the wasteland.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>EXPLORE ISLANDS</h3>
+                    <p>Journey through diverse biomes teeming with prehistoric life.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="card-icon">🧬</div>
-                    <h3>MUTATIONS</h3>
-                    <p>Gain unique abilities through mutations from consuming mutated creatures.</p>
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>TEAM UP</h3>
+                    <p>Join tribes and conquer challenges together with friends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dinosaurs Section -->
+    <section id="dinosaurs" class="dinosaurs">
+        <div class="container">
+            <div class="section-header">
+                <h2>FEAR THE CREATURES</h2>
+                <p>From tiny Compsognathus to mighty Tyrannosaurus Rex</p>
+            </div>
+            <div class="dino-showcase">
+                <div class="dino-card">
+                    <div class="dino-img rex"></div>
+                    <h3>Tyrannosaurus Rex</h3>
+                    <p>The undisputed king of the island with devastating bite force.</p>
+                </div>
+                <div class="dino-card">
+                    <div class="dino-img triceratops"></div>
+                    <h3>Triceratops</h3>
+                    <p>Herbivore with powerful defensive capabilities.</p>
+                </div>
+                <div class="dino-card">
+                    <div class="dino-img raptor"></div>
+                    <h3>Direbear</h3>
+                    <p>Fierce predator with incredible agility and strength.</p>
                 </div>
             </div>
         </div>
@@ -81,30 +129,37 @@
         <div class="container">
             <div class="survival-content">
                 <div class="survival-text">
-                    <h2>SURVIVE THE WASTELAND</h2>
-                    <p>In Fallout 76, every decision matters. Manage your health, hunger, thirst, and radiation exposure while scavenging for resources in a dangerous post-nuclear world.</p>
-                    <ul>
-                        <li>Scavenge for weapons, armor, and supplies</li>
-                        <li>Hunt mutated creatures for crafting materials</li>
-                        <li>Navigate treacherous terrain filled with dangers</li>
-                        <li>Team up with other survivors for mutual protection</li>
-                    </ul>
+                    <h2>SURVIVE AT ALL COSTS</h2>
+                    <p>In ARK: Survival Ascended, every resource matters and every decision could be your last. Gather resources, craft essential items, and build shelters to withstand the elements and predators.</p>
+                    <div class="survival-stats">
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Creatures</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Biomes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Possibilities</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">START SURVIVING</a>
                 </div>
                 <div class="survival-image">
-                    <div class="terminal">
-                        <div class="terminal-header">
-                            <div class="terminal-dot"></div>
-                            <div class="terminal-dot"></div>
-                            <div class="terminal-dot"></div>
-                            <span>Vault-Tec Terminal OS v2.1</span>
-                        </div>
-                        <div class="terminal-content">
-                            <p>> INITIATING SURVIVAL PROTOCOLS...</p>
-                            <p>> SCANNING FOR RESOURCES...</p>
-                            <p>> RADIATION LEVELS: MODERATE</p>
-                            <p>> RECOMMENDATION: SEEK SHELTER</p>
-                            <p>> STATUS: OVERSEER APPROVED</p>
-                            <p class="cursor">_</p>
+                    <div class="survival-screen">
+                        <div class="screen-content">
+                            <div class="status-bar">
+                                <div class="health">Health: 85%</div>
+                                <div class="stamina">Stamina: 60%</div>
+                                <div class="food">Food: 40%</div>
+                            </div>
+                            <div class="radar">
+                                <div class="radar-dot"></div>
+                                <div class="radar-dot"></div>
+                                <div class="radar-dot"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -115,53 +170,101 @@
     <!-- Community Section -->
     <section id="community" class="community">
         <div class="container">
-            <h2>JOIN THE COMMUNITY</h2>
-            <div class="community-stats">
-                <div class="stat">
-                    <span class="number">1.2M+</span>
-                    <span class="label">ACTIVE PLAYERS</span>
-                </div>
-                <div class="stat">
-                    <span class="number">50K+</span>
-                    <span class="label">PLAYER CREATORS</span>
-                </div>
-                <div class="stat">
-                    <span class="number">1000+</span>
-                    <span class="label">DAILY EVENTS</span>
-                </div>
+            <div class="section-header">
+                <h2>JOIN THE HERD</h2>
+                <p>Connect with millions of players worldwide</p>
             </div>
-            <div class="cta-banner">
-                <p>Become part of the largest Fallout community in the wasteland</p>
-                <button class="btn-primary">CREATE ACCOUNT</button>
+            <div class="community-content">
+                <div class="community-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-user-friends"></i>
+                        <h3>50M+</h3>
+                        <p>Players Worldwide</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-download"></i>
+                        <h3>100M+</h3>
+                        <p>Downloads</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Award Winning</h3>
+                        <p>Critical Acclaim</p>
+                    </div>
+                </div>
+                <div class="community-cta">
+                    <h3>BECOME PART OF THE ARK</h3>
+                    <p>Join our official Discord server and connect with fellow survivors</p>
+                    <a href="#" class="btn btn-secondary">JOIN DISCORD</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="vault">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="vault-tec">
-                    <h3>VAULT-TEC CORPORATION</h3>
-                    <p>Established 2077 • Re-established 2102</p>
-                    <p>Your future is protected. Your survival is guaranteed.</p>
+                <div class="footer-logo">
+                    <h2>ARK<span>:</span> SURVIVAL ASCENDED</h2>
+                    <p>The ultimate dinosaur survival experience</p>
                 </div>
-                <div class="footer-nav">
-                    <ul>
-                        <li><a href="#">TERMS OF SERVICE</a></li>
-                        <li><a href="#">PRIVACY POLICY</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                        <li><a href="#">SUPPORT</a></li>
-                    </ul>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>GAME</h4>
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">System Requirements</a></li>
+                            <li><a href="#">Updates</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>COMMUNITY</h4>
+                        <ul>
+                            <li><a href="#">Forums</a></li>
+                            <li><a href="#">Discord</a></li>
+                            <li><a href="#">Wiki</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>SUPPORT</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Bug Reports</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>© 2077 VAULT-TEC CORPORATION. ALL RIGHTS RESERVED. FALLOUT, VAULT-TEC AND RELATED SIGNS ARE REGISTERED TRADEMARKS OF BETHESDA SOFTWORKS LLC.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Studio Wildcard. ARK: Survival Ascended is a trademark of Studio Wildcard. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scanlines Effect -->
-    <div class="scanlines"></div>
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking a link
+            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }));
+            
+            // Preloader
+            window.addEventListener('load', function() {
+                const preloader = document.querySelector('.preloader');
+                preloader.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
