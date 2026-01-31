@@ -3,24 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Modern Web Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding: 40px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .card p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        
+        .feature i {
+            color: #3498db;
+            font-size: 1.3rem;
+            margin-right: 12px;
+            min-width: 24px;
+        }
+        
+        .cta {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+            border-radius: 12px;
+            color: white;
+            margin-top: 20px;
+        }
+        
+        .cta h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2575fc;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            background: #eef5ff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eaeaea;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 0;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <div class="navbar">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
+    <div class="container">
+        <header>
+            <h1>Modern Web Design</h1>
+            <p class="subtitle">Clean, responsive and accessible design that works across all devices</p>
+        </header>
+        
+        <main class="content">
+            <section class="card">
+                <h2>Professional Design</h2>
+                <p>Our design process focuses on creating intuitive interfaces that solve real problems while maintaining visual appeal. Every pixel is carefully crafted for optimal user experience.</p>
+            </section>
+            
+            <section class="card">
+                <h2>Responsive Layouts</h2>
+                <p>Designed to work seamlessly on mobile, tablet, and desktop. Our layouts adapt automatically to any screen size without compromising performance or aesthetics.</p>
+            </section>
+            
+            <section class="features">
+                <div class="feature">
+                    <i>✓</i>
+                    <div>
+                        <h3>Fast Performance</h3>
+                        <p>Optimized for speed with minimal load times</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i>✓</i>
+                    <div>
+                        <h3>Accessible Design</h3>
+                        <p>Compliant with WCAG 2.1 standards</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i>✓</i>
+                    <div>
+                        <h3>Modern UI</h3>
+                        <p>Smooth animations and contemporary aesthetics</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="cta">
+                <h2>Ready to Start?</h2>
+                <p>Get started with our modern web solutions today - no experience needed!</p>
+                <a href="#" class="btn">Get Started Now →</a>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2023 Modern Web Design | All rights reserved</p>
+        </footer>
     </div>
-
-    <div class="hero">
-        <h1>Welcome to our website</h1>
-    </div>
-
-    <footer>
-        Copyright &copy; 2023. All rights reserved.
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
