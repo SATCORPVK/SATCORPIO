@@ -1,141 +1,136 @@
-// DOM Elements
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = themeToggle.querySelector('i');
-const featuredLink = document.querySelector('.featured-link');
-const linkCards = document.querySelectorAll('.link-card');
-const subscribeBtn = document.querySelector('.subscribe-btn');
-const emailInput = document.querySelector('.email-input');
+/* ==========================
+   SATCORP.IO - Interactive JS Placeholders
+   ========================== */
 
-// Theme Management
-function initializeTheme() {
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const currentTheme = localStorage.getItem('theme');
-    
-    if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
-        document.body.classList.add('dark-mode');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
+/* --------------------------
+   Smooth Scrolling for Nav Links
+--------------------------- */
+const navLinks = document.querySelectorAll('header nav a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetID = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetID);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+/* --------------------------
+   Dummy Live Server Dashboards
+--------------------------- */
+const dashboardPlaceholder = document.querySelector('.dashboard-placeholder');
+
+if (dashboardPlaceholder) {
+    // Simulate 3 server cards
+    for (let i = 1; i <= 3; i++) {
+        const card = document.createElement('div');
+        card.className = 'server-card';
+        card.innerHTML = `
+            <h3>Server ${i}</h3>
+            <p>Status: <span class="status">Offline</span></p>
+            <p>Players: <span class="players">0</span>/100</p>
+        `;
+        dashboardPlaceholder.appendChild(card);
     }
-}
 
-function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    
-    if (document.body.classList.contains('dark-mode')) {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-        localStorage.setItem('theme', 'light');
-    }
-}
-
-// Featured Link Animation
-function setupFeaturedLinkAnimation() {
+    // Simulate server updates
     setInterval(() => {
-        featuredLink.style.boxShadow = '0 0 20px rgba(108, 99, 255, 0.6)';
-        setTimeout(() => {
-            featuredLink.style.boxShadow = '0 5px 15px rgba(108, 99, 255, 0.3)';
-        }, 1000);
+        const statusElements = document.querySelectorAll('.server-card .status');
+        const playerElements = document.querySelectorAll('.server-card .players');
+
+        statusElements.forEach((status, idx) => {
+            const isOnline = Math.random() > 0.3; // 70% chance online
+            status.textContent = isOnline ? 'Online' : 'Offline';
+            status.style.color = isOnline ? '#00ffea' : '#ff0055';
+
+            playerElements[idx].textContent = isOnline ? Math.floor(Math.random() * 100) : 0;
+        });
     }, 3000);
 }
 
-// Link Card Interactions
-function setupLinkCardInteractions() {
-    linkCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateX(5px)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateX(0)';
-        });
-        
-        // Open links in new tab
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            const url = this.getAttribute('href');
-            if (url && url !== '#') {
-                window.open(url, '_blank');
-            }
-        });
+/* --------------------------
+   KYRAX AI Tool Placeholder
+--------------------------- */
+const kyraxPlaceholder = document.querySelector('.kyrax-placeholder');
+
+if (kyraxPlaceholder) {
+    const button = document.createElement('button');
+    button.textContent = "Run KYRAX Simulation";
+    button.className = 'kyrax-btn';
+    kyraxPlaceholder.appendChild(button);
+
+    button.addEventListener('click', () => {
+        alert("KYRAX AI simulation placeholder executed.");
     });
 }
 
-// Form Submission Handling
-function setupNewsletterForm() {
-    const form = document.querySelector('.email-form');
-    
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const email = emailInput.value.trim();
-        
-        if (!email) {
-            alert('Please enter your email address');
-            return;
-        }
-        
-        // Simple email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
-        
-        // Simulate submission process
-        subscribeBtn.textContent = 'Submitting...';
-        subscribeBtn.disabled = true;
-        
-        setTimeout(() => {
-            alert(`Thank you for subscribing with ${email}! You'll receive our next update.`);
-            emailInput.value = '';
-            subscribeBtn.textContent = 'Join';
-            subscribeBtn.disabled = false;
-        }, 1500);
+/* --------------------------
+   Forum Tabs Placeholder
+--------------------------- */
+const forumPlaceholder = document.querySelector('.forum-placeholder');
+
+if (forumPlaceholder) {
+    const tabs = ['General', 'Strategy', 'Lore'];
+    const tabNav = document.createElement('div');
+    tabNav.className = 'forum-tabs';
+
+    const tabContent = document.createElement('div');
+    tabContent.className = 'tab-content';
+    tabContent.textContent = "Select a tab to view forum posts.";
+
+    tabs.forEach(tabName => {
+        const tabButton = document.createElement('button');
+        tabButton.textContent = tabName;
+        tabButton.addEventListener('click', () => {
+            tabContent.textContent = `Placeholder posts for "${tabName}" forum.`;
+        });
+        tabNav.appendChild(tabButton);
+    });
+
+    forumPlaceholder.appendChild(tabNav);
+    forumPlaceholder.appendChild(tabContent);
+}
+
+/* --------------------------
+   Donation Modal Placeholder
+--------------------------- */
+const donatePlaceholder = document.querySelector('.donate-placeholder');
+
+if (donatePlaceholder) {
+    const donateBtn = document.createElement('button');
+    donateBtn.textContent = "Contribute Now";
+    donateBtn.className = 'donate-btn';
+    donatePlaceholder.appendChild(donateBtn);
+
+    donateBtn.addEventListener('click', () => {
+        alert("Donation modal placeholder triggered.");
     });
 }
 
-// Initialize all features when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initializeTheme();
-    setupFeaturedLinkAnimation();
-    setupLinkCardInteractions();
-    setupNewsletterForm();
-    
-    // Theme toggle event listener
-    themeToggle.addEventListener('click', toggleTheme);
-    
-    // Add subtle entrance animations
-    const profileCard = document.querySelector('.profile-card');
-    const linksContainer = document.querySelector('.links-container');
-    const newsletterSection = document.querySelector('.newsletter-section');
-    
-    // Simple fade-in animation
-    setTimeout(() => {
-        profileCard.style.opacity = '1';
-        profileCard.style.transform = 'translateY(0)';
-    }, 100);
-    
-    setTimeout(() => {
-        linksContainer.style.opacity = '1';
-        linksContainer.style.transform = 'translateY(0)';
-    }, 300);
-    
-    setTimeout(() => {
-        newsletterSection.style.opacity = '1';
-        newsletterSection.style.transform = 'translateY(0)';
-    }, 500);
-});
+/* --------------------------
+   Media Lightbox Placeholder
+--------------------------- */
+const mediaPlaceholder = document.querySelector('.media-placeholder');
 
-// Prevent context menu on images (optional)
-document.addEventListener('contextmenu', function(e) {
-    if (e.target.tagName === 'IMG') {
-        e.preventDefault();
+if (mediaPlaceholder) {
+    for (let i = 1; i <= 4; i++) {
+        const img = document.createElement('div');
+        img.className = 'media-item';
+        img.textContent = `Media ${i}`;
+        img.style.cssText = `
+            background-color: #111122;
+            color: #7c4dff;
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 2rem;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #7c4dff33 inset;
+        `;
+        img.addEventListener('click', () => {
+            alert(`Lightbox placeholder for Media ${i}`);
+        });
+        mediaPlaceholder.appendChild(img);
     }
-});
+}
