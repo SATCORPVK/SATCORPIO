@@ -3,53 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Landing Page</title>
+    <title>Fallout 76 - Wasteland Adventures</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">BrandName</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="cta-button">Get Started</button>
-        </nav>
+    <!-- Radiation Warning -->
+    <div class="radiation-warning">
+        <span class="blink">RADIATION WARNING</span>
+    </div>
+
+    <!-- Header -->
+    <header class="fallout-header">
+        <div class="container">
+            <div class="logo">
+                <h1>FALLOUT<span>76</span></h1>
+                <p>WASTELAND ADVENTURES</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#lore">LORE</a></li>
+                    <li><a href="#survival">SURVIVAL</a></li>
+                    <li><a href="#community">COMMUNITY</a></li>
+                    <li><a href="#vault">VAULT-TEC</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Our Amazing Product</h1>
-            <p>Transform your workflow with our innovative solution designed for modern professionals.</p>
-            <button class="cta-button large">Start Free Trial</button>
+        <div class="container">
+            <div class="hero-content">
+                <h2>WELCOME TO APPALACHIA</h2>
+                <p>Twenty-five years after the bombs fell, the vaults have opened. Explore the wasteland alone or with friends in Bethesda's open-world RPG.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary">PLAY NOW</button>
+                    <button class="btn-secondary">WATCH TRAILER</button>
+                </div>
+            </div>
+        </div>
+        <div class="scanline"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="lore" class="features">
+        <div class="container">
+            <h2>WASTELAND FEATURES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="card-icon">☢️</div>
+                    <h3>RADIATION SYSTEM</h3>
+                    <p>Monitor your radiation levels and manage exposure with Geiger counters and Rad-X.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">⚔️</div>
+                    <h3>PVP ENCOUNTERS</h3>
+                    <p>Engage in player vs player combat in designated zones across Appalachia.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">🏠</div>
+                    <h3>C.A.M.P. SYSTEM</h3>
+                    <p>Build and customize your personal base anywhere in the wasteland.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">🧬</div>
+                    <h3>MUTATIONS</h3>
+                    <p>Gain unique abilities through mutations from consuming mutated creatures.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="features" class="features">
-        <h2>Key Features</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>Fast Performance</h3>
-                <p>Optimized for speed and efficiency</p>
-            </div>
-            <div class="feature-card">
-                <h3>Easy Integration</h3>
-                <p>Seamlessly connects with your existing tools</p>
-            </div>
-            <div class="feature-card">
-                <h3>Secure & Reliable</h3>
-                <p>Enterprise-grade security for peace of mind</p>
+    <!-- Survival Section -->
+    <section id="survival" class="survival">
+        <div class="container">
+            <div class="survival-content">
+                <div class="survival-text">
+                    <h2>SURVIVE THE WASTELAND</h2>
+                    <p>In Fallout 76, every decision matters. Manage your health, hunger, thirst, and radiation exposure while scavenging for resources in a dangerous post-nuclear world.</p>
+                    <ul>
+                        <li>Scavenge for weapons, armor, and supplies</li>
+                        <li>Hunt mutated creatures for crafting materials</li>
+                        <li>Navigate treacherous terrain filled with dangers</li>
+                        <li>Team up with other survivors for mutual protection</li>
+                    </ul>
+                </div>
+                <div class="survival-image">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dot"></div>
+                            <div class="terminal-dot"></div>
+                            <div class="terminal-dot"></div>
+                            <span>Vault-Tec Terminal OS v2.1</span>
+                        </div>
+                        <div class="terminal-content">
+                            <p>> INITIATING SURVIVAL PROTOCOLS...</p>
+                            <p>> SCANNING FOR RESOURCES...</p>
+                            <p>> RADIATION LEVELS: MODERATE</p>
+                            <p>> RECOMMENDATION: SEEK SHELTER</p>
+                            <p>> STATUS: OVERSEER APPROVED</p>
+                            <p class="cursor">_</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 BrandName. All rights reserved.</p>
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2>JOIN THE COMMUNITY</h2>
+            <div class="community-stats">
+                <div class="stat">
+                    <span class="number">1.2M+</span>
+                    <span class="label">ACTIVE PLAYERS</span>
+                </div>
+                <div class="stat">
+                    <span class="number">50K+</span>
+                    <span class="label">PLAYER CREATORS</span>
+                </div>
+                <div class="stat">
+                    <span class="number">1000+</span>
+                    <span class="label">DAILY EVENTS</span>
+                </div>
+            </div>
+            <div class="cta-banner">
+                <p>Become part of the largest Fallout community in the wasteland</p>
+                <button class="btn-primary">CREATE ACCOUNT</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="vault">
+        <div class="container">
+            <div class="footer-content">
+                <div class="vault-tec">
+                    <h3>VAULT-TEC CORPORATION</h3>
+                    <p>Established 2077 • Re-established 2102</p>
+                    <p>Your future is protected. Your survival is guaranteed.</p>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="#">TERMS OF SERVICE</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">SUPPORT</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2077 VAULT-TEC CORPORATION. ALL RIGHTS RESERVED. FALLOUT, VAULT-TEC AND RELATED SIGNS ARE REGISTERED TRADEMARKS OF BETHESDA SOFTWORKS LLC.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scanlines Effect -->
+    <div class="scanlines"></div>
 </body>
 </html>
