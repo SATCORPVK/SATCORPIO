@@ -1,340 +1,118 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"   content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SATCORP – Concierge‑level creative & systems architecture for founders, creators, & brands.">
-  <title>SATCORP – Complete Skill Deck</title>
+    <meta charset="UTF-8">
+    <title>Satcorp – Complete Skill Deck</title>
+    <meta name="description" content="Concierge‑level system architecture, branding & creative operations.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Favicons -->
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-  <!-- Inter + JetBrains Mono (self‑hosted or Google Fonts) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
-        rel="stylesheet">
+    <!-- Google Fonts – choose your pair -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+          rel="stylesheet">
 
-  <!-- Feather icons (deferred) -->
-  <script defer src="https://unpkg.com/feather-icons"></script>
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Reset & Global Styles -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
+<body id="top">
 
-<body>
-  <!-- ==================== NAVIGATION ==================== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#home" class="logo">
-        <img src="assets/img/logo-white.svg" alt="SATCORP" class="logo-img">
-      </a>
+<nav class="primary-nav">
+    <a href="#home" class="logo">Satcorp</a>
+    <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-      <nav class="nav-main" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-        <i data-feather="moon"></i>
-      </button>
+<!-- 1. HERO SECTION -->
+<section id="home" class="hero-section">
+    <div class="hero-slider">
+        <img src="assets/img/hero1.jpg" alt="Hero 1" class="slide active">
+        <img src="assets/img/hero2.jpg" alt="Hero 2" class="slide">
+        <img src="assets/img/hero3.jpg" alt="Hero 3" class="slide">
     </div>
-  </header>
-
-  <!-- ==================== HERO ==================== -->
-  <section id="home" class="hero">
-    <div class="container hero-inner">
-      <h1 class="hero-title">Concierge‑Level Creative & Systems Architecture</h1>
-      <p class="hero-tagline">
-        End‑to‑end problem solving for founders, creators & brands.<br>
-        From vague ideas to polished, production‑ready assets—fast.
-      </p>
-      <a href="#contact" class="btn btn-primary">Start a Project</a>
+    <div class="hero-content">
+        <h1>Static‑no‑Compromise <br> <span>Precision in Every System</span></h1>
+        <p>Concierge level system design, branding, and AI‑enhanced workflow. Turn ideas into deployable assets.</p>
+        <a href="#services" class="btn primary">
+            Our Services <span aria-hidden="true">→</span>
+        </a>
     </div>
-    <div class="hero-bg"></div>
-  </section>
+</section>
 
-  <!-- ==================== ABOUT ==================== -->
-  <section id="about" class="section about">
-    <div class="container">
-      <h2 class="section-title">Core Identity & Operator Value</h2>
-
-      <div class="grid grid-2col gap-lg">
-        <div class="about-text">
-          <ul class="list-check">
-            <li>End‑to‑end problem solver bridging design, automation, branding & systems</li>
-            <li>Translates vague ideas into deployable assets (web/brand/workflow/media)</li>
-            <li>High‑performance workstation‑driven delivery (RTX workflows, rapid iteration)</li>
-            <li>Client‑first concierge model: clarity → scope → execution → polish</li>
-          </ul>
-        </div>
-
-        <figure class="about-visual">
-          <img src="assets/img/about-illustration.svg" alt="SATCORP workflow illustration">
-        </figure>
-      </div>
+<!-- 2. SERVICES (9+ boxes) -->
+<section id="services" class="services">
+    <h2>What We Do</h2>
+    <div class="grid">
+        <!-- Repeat this block for each bullet in the brief -->
+        <article class="card">
+            <img src="assets/icons/identity.svg" alt="Icon">
+            <h3>Brand Identity & Systems</h3>
+            <p>Foundation, modular frameworks, color & typographic doctrine, cross‑platform guides.</p>
+        </article>
+        <article class="card">
+            <img src="assets/icons/web.svg" alt="Icon">
+            <h3>Web Design / UI Systems</h3>
+            <p>Responsive sites, dashboards, interactive UI with animation – <strong>GSAP‑powered</strong>.</p>
+        </article>
+        <article class="card">
+            <img src="assets/icons/architecture.svg" alt="Icon">
+            <h3>Systems Architecture</h3>
+            <p>Workflow mapping, AI pipelines, SOPs, operational strategy.</p>
+        </article>
+        <!-- Add remaining services: Streaming, AI Flow, Game‑Adjacent, Concierge Skills, … -->
     </div>
-  </section>
+</section>
 
-  <!-- ==================== SERVICES ==================== -->
-  <section id="services" class="section services">
-    <div class="container">
-      <h2 class="section-title">What We Do</h2>
+<!-- 3. TECHNOLOGY STACK -->
+<section id="stack" class="stack">
+    <h2>Technology & Infrastructure</h2>
+    <p>High‑performance workstations (RTX), locally‑staged then fuzz‑tested on VPS + CDN. HTML/CSS/JS core with React for heavy modules.</p>
+    <ul>
+        <li><strong>Front‑end:</strong> HTML5, CSS3, JavaScript, GSAP, Vanta.js, React.</li>
+        <li><strong>Back‑end:</strong> Node.js / Python (AI‑scripts), <abbr title="Relational Database">SQL</abbr>.</li>
+        <li><strong>Deployment:</strong> Containerised (Docker), CI/CD via GitHub Actions.</li>
+    </ul>
+</section>
 
-      <!-- Cards grid (3‑col on desktop, 2‑col tablet, 1‑col mobile) -->
-      <div class="grid grid-3col gap-lg">
-
-        <!-- ==== Card template ==== -->
-        <!-- Repeat for each capability group (Brand, Web UI, Systems, etc.) -->
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="layers" class="card-icon"></i>
-            <h3 class="card-title">Brand, Visual & Platform Systems</h3>
-          </header>
-          <div class="card-body">
-            <p>Full identity systems, modular frameworks, logo design, colour doctrine, typography, brand guidelines, social‑media assets, presentation decks, editable templates, and delivery‑ready source files.</p>
-          </div>
-        </article>
-
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="globe" class="card-icon"></i>
-            <h3 class="card-title">Web Design / UI Systems</h3>
-          </header>
-          <div class="card-body">
-            <p>Responsive landing pages, dashboards, web‑app UI, dark/light modes, custom cursors, GSAP/Vanta.js animations, SEO‑ready structure, and scalable hosting strategies.</p>
-          </div>
-        </article>
-
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="settings" class="card-icon"></i>
-            <h3 class="card-title">Systems Architecture</h3>
-          </header>
-          <div class="card-body">
-            <p>Workflow mapping, SOP creation, AI‑assisted pipelines, toolchain optimization, backend logic planning, and scalable service design.</p>
-          </div>
-        </article>
-
-        <!-- Add the rest of the 12+ service blocks here – just copy the <article>… -->
-        <!-- Example (Streaming/Broadcast) -->
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="video" class="card-icon"></i>
-            <h3 class="card-title">Streaming / Broadcast Design</h3>
-          </header>
-          <div class="card-body">
-            <p>OBS scene architecture, overlay design, alerts/HUD UI, TikTok/live kits, animated scene layouts, creator‑focused visual systems.</p>
-          </div>
-        </article>
-
-        <!-- AI‑Enhanced Creative Workflows -->
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="cpu" class="card-icon"></i>
-            <h3 class="card-title">AI‑Enhanced Creative Workflows</h3>
-          </header>
-          <div class="card-body">
-            <p>Prompt engineering, brand‑consistent AI visuals, rapid concept iteration, task automation, custom AI personas & operational agents.</p>
-          </div>
-        </article>
-
-        <!-- Game‑Adjacency -->
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="grid" class="card-icon"></i>
-            <h3 class="card-title">Game‑Adjacent / World‑Building</h3>
-          </header>
-          <div class="card-body">
-            <p>HUD/UI concepts, canon documentation, lore systems, faction/operator design, poster & cinematic key art.</p>
-          </div>
-        </article>
-
-        <!-- Concierge Experience -->
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="user-check" class="card-icon"></i>
-            <h3 class="card-title">Client Experience / Concierge</h3>
-          </header>
-          <div class="card-body">
-            <p>Scope clarification, intake vetting, timeline & revision control, security‑first communications, check‑point execution.</p>
-          </div>
-        </article>
-
-        <!-- Platforms / Marketplaces -->
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="shopping-bag" class="card-icon"></i>
-            <h3 class="card-title">Platforms & Marketplaces</h3>
-          </header>
-          <div class="card-body">
-            <p>Fiverr gig architecture, freelance offer structuring, tiered packages (Basic·Standard·Premium), upsell logic.</p>
-          </div>
-        </article>
-
-        <!-- Documentation / Knowledge Systems -->
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="book" class="card-icon"></i>
-            <h3 class="card-title">Documentation & Knowledge Systems</h3>
-          </header>
-          <div class="card-body">
-            <p>Long‑form guides, versioned docs, structured taxonomies, canon‑locked references.</p>
-          </div>
-        </article>
-
-        <!-- Asset Packaging / Delivery -->
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="package" class="card-icon"></i>
-            <h3 class="card-title">Asset Packaging & Delivery</h3>
-          </header>
-          <div class="card-body">
-            <p>Professional file structuring, print/web‑ready exports, organized version control, long‑term usability assurance.</p>
-          </div>
-        </article>
-
-        <!-- Ideal Clients -->
-        <article class="card service-card">
-          <header class="card-header">
-            <i data-feather="users" class="card-icon"></i>
-            <h3 class="card-title">Ideal Clients</h3>
-          </header>
-          <div class="card-body">
-            <p>Founders, small businesses, creators/streamers, real‑estate & professional services, brands needing identity consistency.</p>
-          </div>
-        </article>
-
-      </div> <!-- /.grid -->
+<!-- 4. CLIENTS -->
+<section id="clients" class="clients">
+    <h2>Ideal Clients</h2>
+    <p>Founders, stream creators, real‑estate & professional service brands needing a cohesive identity that grows with them.</p>
+    <div class="logos">
+        <img src="assets/img/logo1.png" alt="Client 1">
+        <img src="assets/img/logo2.png" alt="Client 2">
+        <img src="assets/img/logo3.png" alt="Client 3">
+        <img src="assets/img/logo4.png" alt="Client 4">
     </div>
-  </section>
+</section>
 
-  <!-- ==================== PORTFOLIO ==================== -->
-  <section id="portfolio" class="section portfolio">
-    <div class="container">
-      <h2 class="section-title">Portfolio Highlights</h2>
+<!-- 5. CONTACT -->
+<section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
 
-      <div class="grid grid-3col gap-lg">
-        <!-- Example case study card -->
-        <article class="card portfolio-card">
-          <figure class="card-figure">
-            <img src="assets/img/portfolio-01.jpg" alt="Brand system for Acme Studios">
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title">Acme Studios – End‑to‑End Brand System</h3>
-            <p>Full visual identity, dynamic social‑media templates, and a responsive site built in React.</p>
-            <a href="#" class="link">View case study →</a>
-          </div>
-        </article>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
 
-        <!-- Repeat cards for other projects -->
-      </div>
-    </div>
-  </section>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-  <!-- ==================== PROCESS ==================== -->
-  <section id="process" class="section process">
-    <div class="container">
-      <h2 class="section-title">Our Concierge Process</h2>
+        <button type="submit" class="btn primary">Send Message</button>
+    </form>
+</section>
 
-      <ol class="process-steps">
-        <li>
-          <h3>Clarify Goal & Constraints</h3>
-          <p>Discovery call, intake questionnaire, and definition of success metrics.</p>
-        </li>
-        <li>
-          <h3>Align Scope & Deliverables</h3>
-          <p>Scope document, timeline, and revision policy – all signed off before work starts.</p>
-        </li>
-        <li>
-          <h3>Execute with Check‑points</h3>
-          <p>Iterative development, regular demos, and AI‑enhanced rapid prototyping.</p>
-        </li>
-        <li>
-          <h3>Polish, Export & Handoff</h3>
-          <p>Final QA, organized delivery package, and post‑launch support options.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
+<footer class="footer">
+    <p>&copy; 2026 Satcorp. All rights reserved.</p>
+</footer>
 
-  <!-- ==================== CONTACT ==================== -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2 class="section-title">Start a Project</h2>
-
-      <p class="contact-intro">
-        Ready to turn your vision into a polished, production‑ready deliverable? Fill the form below or schedule a call.
-      </p>
-
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-        <div class="grid grid-2col gap-sm">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your name">
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="_replyto" required placeholder="you@domain.com">
-          </div>
-        </div>
-
-        <div class="mt-sm">
-          <label for="company">Company / Project (optional)</label>
-          <input type="text" id="company" name="company" placeholder="Acme Corp">
-        </div>
-
-        <div class="mt-sm">
-          <label for="message">What do you need?</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Brief description of your project…"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary mt-lg">Send Request</button>
-      </form>
-
-      <div class="contact-details mt-lg">
-        <p>Or book a 15‑minute discovery call: <a href="https://calendly.com/your‑calendar" target="_blank" rel="noopener">Calendly</a></p>
-        <p>Follow us: <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> • <a href="https://linkedin.com/company/yourhandle" target="_blank">LinkedIn</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img src="assets/img/logo-white.svg" alt="SATCORP logo" class="footer-logo">
-        <p class="footer-tagline">Technology is a force multiplier, not a crutch.</p>
-      </div>
-
-      <nav class="footer-nav">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <p class="footer-legal">&copy; 2026 SATCORP – All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Feather icons init -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      feather.replace();
-    });
-  </script>
-
-  <!-- Main JS -->
-  <script src="assets/js/main.js" defer></script>
+<script src="js/main.js"></script>
 </body>
 </html>
