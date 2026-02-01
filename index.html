@@ -2,117 +2,737 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Satcorp – Complete Skill Deck</title>
-    <meta name="description" content="Concierge‑level system architecture, branding & creative operations.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATCORP | Complete Skill Deck - Concierge/System Architect/Creative Operator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a0a0a;
+            --primary-light: #f5f5f5;
+            --accent-primary: #0066ff;
+            --accent-secondary: #ff3366;
+            --text-primary: #ffffff;
+            --text-secondary: #aaaaaa;
+            --card-bg: rgba(30, 30, 30, 0.7);
+            --section-spacing: 80px;
+        }
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Google Fonts – choose your pair -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-          rel="stylesheet">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    <!-- Reset & Global Styles -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--accent-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 51, 102, 0.1) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            font-weight: 300;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--text-secondary);
+        }
+
+        .operations-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .operation-item {
+            background: var(--card-bg);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-primary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+        }
+
+        /* Content Sections */
+        section {
+            padding: var(--section-spacing) 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--accent-primary);
+        }
+
+        .card-list {
+            list-style: none;
+        }
+
+        .card-list li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .card-list li:before {
+            content: "•";
+            color: var(--accent-primary);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Core Identity Section */
+        .core-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-primary);
+        }
+
+        /* Tech Stack Section */
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tech-icon {
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /* Operations List */
+        .operations-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .op-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        /* The Standard Section */
+        .standard-section {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .standard-quote {
+            font-size: 1.8rem;
+            font-weight: 500;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.4;
+        }
+
+        .standard-list {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        /* Client Types */
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .client-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent-primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--primary-dark);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
-<body id="top">
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SAT<span>CORP</span></div>
+                <ul class="nav-links">
+                    <li><a href="#core">Core Identity</a></li>
+                    <li><a href="#brand">Brand Systems</a></li>
+                    <li><a href="#web">Web Design</a></li>
+                    <li><a href="#systems">Systems Architecture</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-toggle">☰</div>
+            </nav>
+        </div>
+    </header>
 
-<nav class="primary-nav">
-    <a href="#home" class="logo">Satcorp</a>
-    <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#stack">Stack</a></li>
-        <li><a href="#clients">Clients</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">SATCORP</h1>
+                <h2 class="hero-subtitle">Complete Skill Deck</h2>
+                <p class="hero-tagline">Concierge-level execution bridging design, automation, branding, and systems to transform vague ideas into deployable assets.</p>
+                
+                <div class="operations-list">
+                    <div class="operation-item">ANU</div>
+                    <div class="operation-item">Ki-Ra Studios</div>
+                    <div class="operation-item">KYRAX</div>
+                    <div class="operation-item">PULSΞ</div>
+                    <div class="operation-item">SCOPU</div>
+                </div>
+                
+                <a href="#contact" class="cta-button">Start a Project</a>
+            </div>
+        </div>
+    </section>
 
-<!-- 1. HERO SECTION -->
-<section id="home" class="hero-section">
-    <div class="hero-slider">
-        <img src="assets/img/hero1.jpg" alt="Hero 1" class="slide active">
-        <img src="assets/img/hero2.jpg" alt="Hero 2" class="slide">
-        <img src="assets/img/hero3.jpg" alt="Hero 3" class="slide">
-    </div>
-    <div class="hero-content">
-        <h1>Static‑no‑Compromise <br> <span>Precision in Every System</span></h1>
-        <p>Concierge level system design, branding, and AI‑enhanced workflow. Turn ideas into deployable assets.</p>
-        <a href="#services" class="btn primary">
-            Our Services <span aria-hidden="true">→</span>
-        </a>
-    </div>
-</section>
+    <!-- Core Identity Section -->
+    <section id="core">
+        <div class="container">
+            <h2 class="section-title">Core Identity / Operator Value</h2>
+            <p class="section-subtitle">End-to-end problem solving with client-first concierge execution</p>
+            
+            <div class="core-values">
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3>High-Performance Workstation</h3>
+                    <p>RTX-accelerated workflows enable rapid iteration and delivery.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🔄</div>
+                    <h3>Clarity to Execution</h3>
+                    <p>Translating vague ideas into polished, deployable assets.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Client-First Model</h3>
+                    <p>Structured process: clarity → scope → execution → polish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- 2. SERVICES (9+ boxes) -->
-<section id="services" class="services">
-    <h2>What We Do</h2>
-    <div class="grid">
-        <!-- Repeat this block for each bullet in the brief -->
-        <article class="card">
-            <img src="assets/icons/identity.svg" alt="Icon">
-            <h3>Brand Identity & Systems</h3>
-            <p>Foundation, modular frameworks, color & typographic doctrine, cross‑platform guides.</p>
-        </article>
-        <article class="card">
-            <img src="assets/icons/web.svg" alt="Icon">
-            <h3>Web Design / UI Systems</h3>
-            <p>Responsive sites, dashboards, interactive UI with animation – <strong>GSAP‑powered</strong>.</p>
-        </article>
-        <article class="card">
-            <img src="assets/icons/architecture.svg" alt="Icon">
-            <h3>Systems Architecture</h3>
-            <p>Workflow mapping, AI pipelines, SOPs, operational strategy.</p>
-        </article>
-        <!-- Add remaining services: Streaming, AI Flow, Game‑Adjacent, Concierge Skills, … -->
-    </div>
-</section>
+    <!-- Brand Systems Section -->
+    <section id="brand" style="background: rgba(20, 20, 20, 0.5);">
+        <div class="container">
+            <h2 class="section-title">Brand, Visual & Platform Systems</h2>
+            <p class="section-subtitle">Comprehensive identity systems built for scalability and consistency</p>
+            
+            <div class="section-content">
+                <div class="card">
+                    <h3 class="card-title">Capabilities</h3>
+                    <ul class="card-list">
+                        <li>Brand foundation & full identity systems</li>
+                        <li>Modular design frameworks for scalability</li>
+                        <li>Wordmark & logotype design</li>
+                        <li>Color doctrine & typography systems</li>
+                        <li>Brand guideline documentation</li>
+                        <li>Multi-platform asset systems</li>
+                        <li>Editable template systems</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Deliverables</h3>
+                    <ul class="card-list">
+                        <li>PNG/SVG/AI source files</li>
+                        <li>Brand books & style guides</li>
+                        <li>Logo usage & spacing rules</li>
+                        <li>Print-ready & web-ready assets</li>
+                        <li>Social media format packages</li>
+                        <li>Presentation decks & collateral</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- 3. TECHNOLOGY STACK -->
-<section id="stack" class="stack">
-    <h2>Technology & Infrastructure</h2>
-    <p>High‑performance workstations (RTX), locally‑staged then fuzz‑tested on VPS + CDN. HTML/CSS/JS core with React for heavy modules.</p>
-    <ul>
-        <li><strong>Front‑end:</strong> HTML5, CSS3, JavaScript, GSAP, Vanta.js, React.</li>
-        <li><strong>Back‑end:</strong> Node.js / Python (AI‑scripts), <abbr title="Relational Database">SQL</abbr>.</li>
-        <li><strong>Deployment:</strong> Containerised (Docker), CI/CD via GitHub Actions.</li>
-    </ul>
-</section>
+    <!-- Web Design Section -->
+    <section id="web">
+        <div class="container">
+            <h2 class="section-title">Web Design & UI Systems</h2>
+            <p class="section-subtitle">Responsive, performance-tuned web experiences</p>
+            
+            <div class="section-content">
+                <div class="card">
+                    <h3 class="card-title">Capabilities</h3>
+                    <ul class="card-list">
+                        <li>Landing pages & business sites</li>
+                        <li>Responsive design systems</li>
+                        <li>Web UI/UX for apps & dashboards</li>
+                        <li>Interactive elements & animations</li>
+                        <li>Dark/light modes & custom cursors</li>
+                        <li>SEO-ready structure & performance tuning</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Tech Stack</h3>
+                    <ul class="card-list">
+                        <li>HTML · CSS · JavaScript</li>
+                        <li>GSAP · Vanta.js animations</li>
+                        <li>Basic React integration</li>
+                        <li>Hosting & deployment strategy</li>
+                    </ul>
+                    <div class="tech-icons">
+                        <div class="tech-icon">HTML5</div>
+                        <div class="tech-icon">CSS3</div>
+                        <div class="tech-icon">JS</div>
+                        <div class="tech-icon">GSAP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- 4. CLIENTS -->
-<section id="clients" class="clients">
-    <h2>Ideal Clients</h2>
-    <p>Founders, stream creators, real‑estate & professional service brands needing a cohesive identity that grows with them.</p>
-    <div class="logos">
-        <img src="assets/img/logo1.png" alt="Client 1">
-        <img src="assets/img/logo2.png" alt="Client 2">
-        <img src="assets/img/logo3.png" alt="Client 3">
-        <img src="assets/img/logo4.png" alt="Client 4">
-    </div>
-</section>
+    <!-- Systems Architecture Section -->
+    <section id="systems" style="background: rgba(20, 20, 20, 0.5);">
+        <div class="container">
+            <h2 class="section-title">Systems Architecture</h2>
+            <p class="section-subtitle">Workflow mapping, optimization, and scalable business systems</p>
+            
+            <div class="operations-container">
+                <div class="op-card">
+                    <h3>Application Layer</h3>
+                    <ul class="card-list">
+                        <li>Workflow mapping & SOP creation</li>
+                        <li>Client intake & asset organization</li>
+                        <li>AI-assisted production pipelines</li>
+                        <li>Toolchain optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="op-card">
+                    <h3>Advisory Layer</h3>
+                    <ul class="card-list">
+                        <li>Brand clarity & positioning</li>
+                        <li>Scope definition & expectation alignment</li>
+                        <li>Creative direction consulting</li>
+                        <li>Long-term scalability planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- 5. CONTACT -->
-<section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+    <!-- Additional Capabilities Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Specialized Capabilities</h2>
+            
+            <div class="section-content">
+                <div class="card">
+                    <h3 class="card-title">Streaming & Broadcast</h3>
+                    <ul class="card-list">
+                        <li>OBS scene architecture & overlay design</li>
+                        <li>Alert/HUD style UI design</li>
+                        <li>Stream branding packages</li>
+                        <li>Animated overlays & scene layouts</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">AI-Enhanced Workflows</h3>
+                    <ul class="card-list">
+                        <li>Prompt engineering frameworks</li>
+                        <li>Brand-consistent AI visuals</li>
+                        <li>Task automation with AI tools</li>
+                        <li>Custom AI personas & operational agents</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3 class="card-title">Game-Adjacent Design</h3>
+                    <ul class="card-list">
+                        <li>HUD/UI concepts</li>
+                        <li>Canon documentation & lore systems</li>
+                        <li>Faction/operator/environment design</li>
+                        <li>Poster & cinematic key art</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" required>
+    <!-- The Standard Section -->
+    <section class="standard-section">
+        <div class="container">
+            <h2 class="section-title">The Standard</h2>
+            
+            <p class="standard-quote">"Technology is a force multiplier, not a crutch. AI is not a replacement for thought. Automation is not an excuse for laziness."</p>
+            
+            <div class="standard-list">
+                <ul class="card-list">
+                    <li>We use technology to extend human intent</li>
+                    <li>We remove friction and increase leverage</li>
+                    <li>We preserve focus and remain accountable for outcomes</li>
+                    <li>New modules and refinements continuously evolve with projects</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+    <!-- Ideal Clients Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Ideal Clients</h2>
+            
+            <div class="clients-grid">
+                <div class="client-card">
+                    <h3>Founders & Small Businesses</h3>
+                    <p>Seeking comprehensive brand identity and digital presence</p>
+                </div>
+                
+                <div class="client-card">
+                    <h3>Creators & Streamers</h3>
+                    <p>Need visual systems for content and broadcasting</p>
+                </div>
+                
+                <div class="client-card">
+                    <h3>Professional Services</h3>
+                    <p>Requiring polished branding and presentation systems</p>
+                </div>
+                
+                <div class="client-card">
+                    <h3>Growth-Focused Brands</h3>
+                    <p>Seeking long-term identity consistency and scalability</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <button type="submit" class="btn primary">Send Message</button>
-    </form>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" style="background: rgba(20, 20, 20, 0.5);">
+        <div class="container">
+            <h2 class="section-title">Start Your Project</h2>
+            <p class="section-subtitle">Let's transform your ideas into deployable assets with concierge-level execution</p>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#contact" class="cta-button">Contact SATCORP</a>
+            </div>
+        </div>
+    </section>
 
-<footer class="footer">
-    <p>&copy; 2026 Satcorp. All rights reserved.</p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SATCORP</h3>
+                    <p>Complete Skill Deck</p>
+                    <p>Concierge/System Architect/Creative Operator</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Operations</h3>
+                    <p>ANU · Ki-Ra Studios · KYRAX · PULSΞ · SCOPU</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Core Principle</h3>
+                    <p>Technology as a force multiplier for human creativity and intent</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 SATCORP. All capabilities subject to continuous refinement.</p>
+            </div>
+        </div>
+    </footer>
 
-<script src="js/main.js"></script>
+    <script>
+        // Mobile Navigation Toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+
+        // Simple scroll animation for cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to cards
+        document.querySelectorAll('.card, .value-card, .op-card, .client-card').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
